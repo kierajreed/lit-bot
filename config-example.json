@@ -1,0 +1,59 @@
+{
+  "token": "TOKEN",
+  "owner": "USER ID",
+  "admins": ["USER ID", "USER ID 2"],
+  "moderators": ["USER ID 1", "USER ID 2"],
+  "prefix": "basic ",
+  "commandSettings": {
+    "purge": {
+      "default": 10
+    },
+    "emojize": {
+      "max": 15,
+      "min": 3,
+      "space": ":black_medium_small_square:"
+    },
+    "coinflip": {
+      "max": 100
+    }
+  },
+  "messages": {
+    "global": {
+      "notGuildError": "This command is for servers only!",
+      "commandPermissionError": "you do not have permission to use this command!",
+      "noMentionError": "You need to mention a user to #ACTION#!"
+    },
+    "ban": {
+      "cannotBanError": "I cannot ban that user, sorry."
+    },
+    "emojize": {
+      "messageLengthError": "ERROR: Text to emojize must be between #MIN# and #MAX# characters."
+    },
+    "kick": {
+      "cannotKickError": "I cannot kick that user, sorry."
+    },
+    "purge": {
+      "messageAmountError": "Must provide between 2 and 100 messages to delete."
+    },
+    "reload": {
+      "commandFileNotFoundError": "Must provide a command name to reload."
+    },
+    "reloadall": {
+      "onReloadAll": "ALL COMMANDS RELOADED"
+    }
+  },
+  "guildEventSettings": {
+    "354313792097746954": {
+      "messageChannel": "354313792097746955",
+      "add": "hello #MEMBER#",
+      "remove": "goodbye #MEMBER#"
+    }
+  },
+  "twitterApiInfo": {
+    "consumerKey": "YUsBaBMntINeBKzTFEQycpvA4",
+    "consumerSecret": "81mB2WloE3p5QcmWtloGYzzEY1Vtu4Erm529SEr4dRT2A5V9jd",
+    "accessToken": "953046021474521088-QJFgXcxXCesepfL18P7PmjYSj6rXSdF",
+    "accessTokenSecret": "bZDd1fTQ2BdoHxOu3fhZohTwD5nc41v5BDVH9v5RZX9ZM",
+    "callBackUrl": "https://github.com/SkyHawkB"
+  }
+}
