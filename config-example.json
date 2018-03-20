@@ -40,6 +40,9 @@
     },
     "reloadall": {
       "onReloadAll": "ALL COMMANDS RELOADED"
+    },
+    "udict": {
+      "noArgsError": "You need to provide a word to look up!"
     }
   },
   "guildEventSettings": {
@@ -48,12 +51,5 @@
       "add": "hello #MEMBER#",
       "remove": "goodbye #MEMBER#"
     }
-  },
-  "twitterApiInfo": {
-    "consumerKey": "YUsBaBMntINeBKzTFEQycpvA4",
-    "consumerSecret": "81mB2WloE3p5QcmWtloGYzzEY1Vtu4Erm529SEr4dRT2A5V9jd",
-    "accessToken": "953046021474521088-QJFgXcxXCesepfL18P7PmjYSj6rXSdF",
-    "accessTokenSecret": "bZDd1fTQ2BdoHxOu3fhZohTwD5nc41v5BDVH9v5RZX9ZM",
-    "callBackUrl": "https://github.com/SkyHawkB"
   }
 }
