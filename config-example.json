@@ -42,7 +42,7 @@
       "onReloadAll": "ALL COMMANDS RELOADED"
     },
     "udict": {
-      "noArgsError": "You need to provide a word to look up!"
+      "argError": "You need to provide a word to look up!"
     }
   },
   "guildEventSettings": {
