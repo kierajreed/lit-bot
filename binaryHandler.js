@@ -1,5 +1,4 @@
 module.exports.checkMessage = (message) => {
-  console.log('Detected binary message!');
   if(/[^01 ]/gm.test(message.content)) return;
 
   const words = message.content.trim().split(/ +/g);
