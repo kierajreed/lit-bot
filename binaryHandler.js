@@ -1,8 +1,7 @@
 module.exports.checkMessage = (message) => {
-  if(/[^01 ]/gm.test(message.content)) return;
+  if(/[^01 ]/gm.test(message.content) || message.content == '') return;
 
   const words = message.content.trim().split(/ +/g);
-  console.log(words);
   let result = 'Translation:```';
 
   words.forEach((value, index, array) => {
