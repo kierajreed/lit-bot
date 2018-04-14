@@ -51,7 +51,7 @@ client.on('message', (message) => {
   }
 
   binaryHandler.checkMessage(message);
-  
+
   if(message.content.indexOf(config.prefix) !== 0) {
     return;
   }
@@ -72,8 +72,6 @@ client.on('message', (message) => {
     } catch (err) {
       console.error(err);
     }
-  } else {
-    message.channel.send(`Command not found! Try \`${config.prefix}help\` for a list of commands!`);
   }
 });
 
