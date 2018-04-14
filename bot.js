@@ -3,6 +3,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
+const binaryHandler = require('./binaryHandler.js');
 const fs = require('fs');
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -48,6 +49,9 @@ client.on('message', (message) => {
   if(message.author.bot) {
     return;
   }
+
+  binaryHandler.checkMessage(message);
+  
   if(message.content.indexOf(config.prefix) !== 0) {
     return;
   }
