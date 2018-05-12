@@ -61,7 +61,6 @@ client.on('message', (message) => {
 
   if(command.includes('/') || command.includes('\\')) {
     console.log(`Message by "${message.author.id}" flagged as hack!`);
-    message.channel.send('COMMAND FLAGGED AS HACK');
     return;
   }
 
