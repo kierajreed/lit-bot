@@ -2,7 +2,7 @@
   "name": "basic-bot",
   "version": "2.0.1",
   "description": "A basic discord bot for stuff.",
-  "main": "bot.js",
+  "main": "src/bot.js",
   "dependencies": {
     "clear-require": "^2.0.0",
     "discord.js": "github:hydrabolt/discord.js",
@@ -17,7 +17,7 @@
   "repository": "",
   "scripts": {
     "test": "eslint \"src/**\"",
-    "start": "node src/bot.js && npm audit"
+    "start": "node src/bot.js"
   },
   "keywords": [],
   "author": "",
