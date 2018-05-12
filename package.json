@@ -11,9 +11,13 @@
     "request": "^2.85.0",
     "urban-dictionary": "^1.0.6"
   },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
   "repository": "",
   "scripts": {
-    "test": "echo \"Test Successful\" && exit 0"
+    "test": "eslint \"src/**\"",
+    "start": "node src/bot.js && npm audit"
   },
   "keywords": [],
   "author": "",
