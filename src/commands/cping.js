@@ -3,9 +3,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.0",
-  "name": "cping",
-  "help": "Display client ping!",
-  "usage": "",
-  "hidden": false
+  'version': '1.0',
+  'name': 'cping',
+  'help': 'Display client ping!',
+  'usage': '',
+  'hidden': false,
 };

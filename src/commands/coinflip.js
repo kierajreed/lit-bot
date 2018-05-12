@@ -4,21 +4,25 @@ function randomInt(min, max) {
 
 module.exports.run = (client, message, args, config) => {
   let output = '';
-  if(args[0] === undefined) {
-    let side = randomInt(0,1);
+
+  if(!args[0]) {
+    const side = randomInt(0, 1);
+
     if(side === 0) {
       output = 'I flipped a coin and it landed on heads!';
     } else {
       output = 'I flipped a coin and it landed on tails!';
     }
   } else if(/\d+/.test(args[0])) {
-    let times = parseInt(args[0]);
+    const times = parseInt(args[0], 10);
+
     if(times > config.commandSettings.coinflip.max) {
       message.channel.send(`Number too large, must be at most ${config.commandSettings.coinflip.max}.`);
     } else {
-      output += `I flipped a coin ${times} time${((times>1)?'s':'')} and got the following sequence: \`\`\``;
+      output += `I flipped a coin ${times} time${(times > 1) ? 's' : ''} and got the following sequence: \`\`\``; // eslint-disable-line no-extra-parens
       for(let i = 1; i < times + 1; i++) {
-        let side = randomInt(0,1);
+        const side = randomInt(0, 1);
+
         if(side === 0) {
           output += `H`;
         } else {
@@ -38,9 +42,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.0",
-  "name": "coinflip",
-  "help": "Flip coins!",
-  "usage": "",
-  "hidden": false
+  'version': '1.0',
+  'name': 'coinflip',
+  'help': 'Flip coins!',
+  'usage': '',
+  'hidden': false,
 };

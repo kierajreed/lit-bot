@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -9,21 +9,19 @@ const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: ''
+  prompt: '',
 });
 
-fs.readdir("./commands/", (err, files) => {
+fs.readdir('./src/commands/', (err, files) => {
   console.log(' ');
   if(err) {
     return console.error(err);
   }
 
-  files.forEach(file => {
-    let eventFunction = require(`./commands/${file}`);
-    let eventName = file.split(".")[0];
-    console.log(`Loaded command '${eventName}'!`);
+  files.forEach((file) => {
+    const eventName = file.split('.')[0];
 
-    client.on(eventName, (...args) => eventFunction.run(client, ...args));
+    console.log(`Loaded command '${eventName}'!`);
   });
 
   console.log('All commands loaded!');
@@ -67,8 +65,9 @@ client.on('message', (message) => {
   if(fs.existsSync(`./commands/${command}.js`)) {
     try {
       const commandFile = require(`./commands/${command}.js`);
+
       commandFile.run(client, message, args, config);
-    } catch (err) {
+    } catch(err) {
       console.error(err);
     }
   }
@@ -77,6 +76,7 @@ client.on('message', (message) => {
 client.on('guildMemberAdd', (member) => {
   if(config.guildEventSettings.hasOwnProperty(member.guild.id)) {
     const channel = member.guild.channels.find('id', config.guildEventSettings[member.guild.id].messageChannel);
+
     if(!channel) {
       return;
     }
@@ -87,6 +87,7 @@ client.on('guildMemberAdd', (member) => {
 client.on('guildMemberRemove', (member) => {
   if(config.guildEventSettings.hasOwnProperty(member.guild.id)) {
     const channel = member.guild.channels.find('id', config.guildEventSettings[member.guild.id].messageChannel);
+
     if(!channel) {
       return;
     }

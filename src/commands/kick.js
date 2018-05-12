@@ -9,26 +9,28 @@ module.exports.run = (client, message, args, config) => {
     if(message.mentions.members.size === 0) {
       message.channel.send(config.messages.global.noMentionError.replace('#ACTION#', 'kick'));
     } else {
+      // eslint-disable-next-line no-lonely-if
       if(message.mentions.members.first().kickable) {
         // get the reason
         let reason = '';
+
         for(let i = 1; i < args.length; i++) {
           reason += args[i] + ' ';
         }
         if(args.length === 1) {
           reason = 'Reason Not Provided';
         }
-        let reasonEmbed = new Discord.MessageEmbed()
+        const reasonEmbed = new Discord.MessageEmbed()
           .addField(':warning: User Kick :warning:', `**${message.mentions.members.first()}** *was kicked by*  **${message.author}**`)
           .addField('REASON', reason)
           .setColor(13631488);
 
         // DM kicked user
-        let userToDM = message.mentions.members.first();
-        if(userToDM.verified) {
-          let kickMessage = `You were kicked from **${message.guild.name}** for **${reason}**. Try not to do it again!`;
-          userToDM.send(kickMessage);
-        }
+        const userToDM = message.mentions.members.first();
+        const kickMessage = `You were kicked from **${message.guild.name}** for **${reason}**. Try not to do it again!`;
+
+        if(userToDM.verified) userToDM.send(kickMessage);
+
 
         // kick + send reason
         message.mentions.members.first().kick();
@@ -43,9 +45,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.1",
-  "name": "kick",
-  "help": "Kick a member out of your server!",
-  "usage": "",
-  "hidden": false
+  'version': '1.1',
+  'name': 'kick',
+  'help': 'Kick a member out of your server!',
+  'usage': '',
+  'hidden': false,
 };

@@ -11,9 +11,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.1",
-  "name": "reloadall",
-  "help": "Reload all commands. Owner only.",
-  "usage": "",
-  "hidden": true
+  'version': '1.1',
+  'name': 'reloadall',
+  'help': 'Reload all commands. Owner only.',
+  'usage': '',
+  'hidden': true,
 };

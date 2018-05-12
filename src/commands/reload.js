@@ -12,9 +12,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.0",
-  "name": "reload",
-  "help": "Reload a command. Owner only.",
-  "usage": "",
-  "hidden": true
+  'version': '1.0',
+  'name': 'reload',
+  'help': 'Reload a command. Owner only.',
+  'usage': '',
+  'hidden': true,
 };

@@ -10,7 +10,7 @@ module.exports.run = (client, message, args, config) => {
         message.channel.send(config.messages.purge.messageAmountError);
         return;
       }
-      message.channel.bulkDelete(parseInt(args[0]));
+      message.channel.bulkDelete(parseInt(args[0], 10));
       message.channel.send(`Deleted ${args[0]} messages!`);
     } else {
       if(config.commandSettings.purge.default < 2 || config.commandSettings.purge.default > 100) {
@@ -26,9 +26,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.0",
-  "name": "purge",
-  "help": "Purge messages!",
-  "usage": "",
-  "hidden": false
+  'version': '1.0',
+  'name': 'purge',
+  'help': 'Purge messages!',
+  'usage': '',
+  'hidden': false,
 };

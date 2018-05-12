@@ -1,13 +1,10 @@
 const Discord = require('discord.js');
 
 function addPossesive(string) {
-  let lastChar = string.substring(string.length - 1);
+  const lastChar = string.substring(string.length - 1);
 
-  if(lastChar !== "s") {
-    return string + "'s";
-  } else {
-    return string + "'";
-  }
+  if(lastChar !== 's') return string + '\'s';
+  return string + '\'';
 }
 
 module.exports.run = (client, message, args, config) => {
@@ -19,15 +16,13 @@ module.exports.run = (client, message, args, config) => {
   if(message.mentions.members.size === 0) {
     message.channel.send(config.messages.global.noMentionError.replace('#ACTION#', 'see the roles of'));
   } else {
-    let member = message.mentions.members.first();
-    let roles = member.roles;
+    const member = message.mentions.members.first();
+    const roles = member.roles;
     let roleString = ``;
 
     roles.forEach((value, key, map) => {
       roleString += `\`${value.name}\``;
-      if(true) {
-        roleString += `, `;
-      }
+      roleString += `, `;
     });
     roleString = roleString.substring(0, roleString.length - 2);
 
@@ -41,9 +36,9 @@ module.exports.run = (client, message, args, config) => {
 };
 
 module.exports.info = {
-  "version": "1.0",
-  "name": "whichroles",
-  "help": "See someone's roles!",
-  "usage": "",
-  "hidden": false
+  'version': '1.0',
+  'name': 'whichroles',
+  'help': 'See someone\'s roles!',
+  'usage': '',
+  'hidden': false,
 };
