@@ -1,0 +1,26 @@
+{
+  "name": "basic-bot",
+  "version": "1.0.0",
+  "description": "Just another Discord bot minding it's own business.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "cd src && node index.js",
+    "test": "eslint src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyHawkB/basic-bot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkyHawkB/basic-bot/issues"
+  },
+  "homepage": "https://github.com/SkyHawkB/basic-bot#readme",
+  "dependencies": {
+    "quick-bot": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "~4.19.1"
+  }
+}
