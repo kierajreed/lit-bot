@@ -1,4 +1,4 @@
-# BASIC-BOT
+# LIT-BOT
 
 A basic discord bot for stuff.
 

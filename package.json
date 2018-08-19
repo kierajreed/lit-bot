@@ -1,7 +1,7 @@
 {
   "name": "basic-bot",
   "version": "1.0.0",
-  "description": "Just another Discord bot minding it's own business.",
+  "description": "Just another Discord bot minding its own business.",
   "main": "src/index.js",
   "scripts": {
     "start": "cd src && node index.js",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/SkyHawkB/basic-bot#readme",
   "dependencies": {
-    "quick-bot": "^4.0.1"
+    "quick-bot": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "~4.19.1"
